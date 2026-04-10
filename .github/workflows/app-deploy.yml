@@ -7,28 +7,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Checkout
-        uses: actions/checkout@v3
+      - name: step 1 checkout the repo
+        uses: actions/checkout@v1
 
-      - name: Step 2 - Setup Node (FIXED)
+      - name: step 2 - Install node.js version 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'   # ✅ VERY IMPORTANT
+          node-version: '18'
           cache: 'npm'
-
-      - name: Step 3 - Clean install (FIXED)
+        
+      - name: step3- check node version and install dependencies
         run: |
-          rm -rf node_modules package-lock.json
-          npm cache clean --force
-          npm install
-
-      - name: Step 4 - Verify vite exists
-        run: ls node_modules/.bin
-
-      - name: Step 5 - Build
+          node --version
+          npm ci
+      - name: step4  build the app
         run: npm run build
 
-      - name: Step 6 - Done
+      - name: Print output
         run: |
           echo "Build successful"
           echo "Ready to Deploy"
+    
+    
