@@ -12,12 +12,7 @@ jobs:
 
       - name: step 2 - Install node.js version 20
         uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-
-
+        
       - name: step3- check node version and install dependencies
         run: |
           node --version
