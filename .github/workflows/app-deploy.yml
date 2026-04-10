@@ -19,14 +19,14 @@ jobs:
 
 
       - name: step3- check node version and install dependencies
-        run: 
+        run: |
           node --version
-          npm install vite --save-dev
+          npm ci
       - name: step4  build the app
-        run: npm install && npm run build
+        run: npm run build
 
       - name: Print output
-        run:
+        run: |
           echo "Build successful"
           echo "Ready to Deploy"
     
