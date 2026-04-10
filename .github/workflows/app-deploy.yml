@@ -16,14 +16,16 @@ jobs:
           node-version: '20'
 
       - name: step3- check node version and install dependencies
-        run: node --version
-        run: npm install
+        run: 
+          node --version
+          npm install
       - name: step4  build the app
         run: npm run build
 
       - name: Print output
-        run: echo "Build successful"
-        run: echo "Ready to Deploy"
+        run:
+          echo "Build successful"
+          echo "Ready to Deploy"
     
     
 
