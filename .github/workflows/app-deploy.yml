@@ -3,7 +3,7 @@ name: React App Workflow
 on: [push]
 
 jobs:
-  Build the app:
+  Build-the-app:
     runs-on: ubuntu-latest
 
     steps:
