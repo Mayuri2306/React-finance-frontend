@@ -21,9 +21,9 @@ jobs:
       - name: step3- check node version and install dependencies
         run: 
           node --version
-          npm install
+          npm install vite --save-dev
       - name: step4  build the app
-        run: npm run build
+        run: npm install && npm run build
 
       - name: Print output
         run:
